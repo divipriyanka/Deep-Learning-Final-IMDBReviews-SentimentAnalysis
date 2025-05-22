@@ -14,9 +14,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import json
 import numpy as np
 
-model = load_model(r'C:\Users\priya\OneDrive\Documents\MS\DTSA 5511\week6\GRU.h5') # Loading the pretrained GRU model
+model = load_model("GRU.h5")
 
-with open(r'C:\Users\priya\OneDrive\Documents\MS\DTSA 5511\week6\tokenizer.json') as f:
+with open("tokenizer.json", "r") as f:
     tokenizer_json = f.read()  # Read as string
     tokenizer = tf.keras.preprocessing.text.tokenizer_from_json(tokenizer_json)
 
