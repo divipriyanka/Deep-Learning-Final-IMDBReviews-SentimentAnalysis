@@ -14,12 +14,12 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import json
 import numpy as np
 
-model = load_model("C:\Users\Raj\Desktop\DeepLearning\GRU.h5")
-#model = load_model("GRU.h5")
+# model = load_model("C:\Users\Raj\Desktop\DeepLearning\GRU.h5")
+model = load_model("GRU.h5")
 # model = load_model("best_gru_model.h5")
 
-with open("C:\Users\Raj\Desktop\DeepLearning\tokenizer.json", "r") as f:
-#with open("tokenizer.json", "r") as f:
+#with open("C:\Users\Raj\Desktop\DeepLearning\tokenizer.json", "r") as f:
+with open("tokenizer.json", "r") as f:
     tokenizer_json = f.read()  # Read as string
     tokenizer = tf.keras.preprocessing.text.tokenizer_from_json(tokenizer_json)
 
